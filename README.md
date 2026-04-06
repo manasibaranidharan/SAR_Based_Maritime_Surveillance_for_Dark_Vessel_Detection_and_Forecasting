@@ -5,7 +5,7 @@ An AI-based maritime surveillance system that uses Sentinel-1 SAR imagery, YOLOv
 
 
 
-1. Introduction
+1. INTRODUCTION
 
 Maritime surveillance plays a critical role in coastal security, fisheries regulation, illegal vessel detection, and search-and-rescue operations. A major challenge in ocean monitoring is the presence of dark vessels, which intentionally disable their Automatic Identification System (AIS) to avoid detection.
 
@@ -24,7 +24,7 @@ The Bay of Bengal near Chennai and the Tamil Nadu coast is selected as the prima
 
 
 
-2. Problem Statement
+2. PROBLEM STATEMENT
 
 Illegal maritime activities such as unauthorized fishing, smuggling, piracy staging, and covert ship-to-ship transfer are difficult to detect when vessels switch off AIS.
 
@@ -34,7 +34,7 @@ To detect ships from Sentinel-1 SAR imagery, classify vessel types, identify sus
 
 
 
-3. Objectives
+3. OBJECTIVES
 
 The objectives of the project are:
 
@@ -47,9 +47,9 @@ To develop an interactive surveillance dashboard for maritime intelligence.
 
 
 
-4. Data Sources
+4. DATA SOURCES
 
-4.1 Primary Dataset: xView3 SAR
+4.1 PRIMARY DATASET: xView3 SAR
 
 The xView3 SAR dataset contains:
 
@@ -61,7 +61,7 @@ metadata such as bathymetry and wind conditions
 
 This dataset is highly suitable for vessel detection and classification tasks.
 
-4.2 AIS Data
+4.2 AIS DATA
 
 AIS logs are used for:
 
@@ -77,7 +77,7 @@ Global Fishing Watch
 MarineCadastre
 open AIS datasets
 
-4.3 Geospatial Boundaries
+4.3 GEOSPATIAL BOUNDARIES
 
 Additional shapefiles include:
 
@@ -89,9 +89,9 @@ shipping lanes
 
 
 
-5. Methodology
+5. METHODOLOGY
 
-5.1 Ship Detection from SAR Imagery
+5.1 SHIP DETECTION FROM SAR IMAGERY 
 
 A YOLOv8-based object detection model is trained on SAR tiles.
 
@@ -109,7 +109,7 @@ vessel dimensions
 
 This stage identifies all visible ships in the SAR scene.
 
-5.2 Ship Classification Module
+5.2 SHIP CLASSIFICATION MODULE
 
 After detection, each vessel is classified into categories such as:
 
@@ -134,7 +134,7 @@ movement behavior
 
 This module is especially useful for distinguishing fishing trawlers from cargo vessels, which is important for illegal fishing detection.
 
-5.3 Dark Vessel Identification
+5.3 DARK VESSEL IDENTIFICATION
 
 A detected vessel is flagged as suspicious if:
 
@@ -147,7 +147,7 @@ dark fishing vessel
 smuggling vessel
 unauthorized coastal intruder
 
-5.4 Restricted Zone Violation Detection
+5.4 RESTRICTED ZONE VIOLATION DETECTION
 
 Geofence intelligence is applied using polygon boundaries.
 
@@ -160,7 +160,7 @@ cross-border restricted areas
 
 it is marked as suspicious.
 
-5.5 Loitering and Suspicious Pattern Analysis
+5.5 LOITERING AND SUSPICIOUS PATTERN ANALYSIS
 
 Repeated detections across time are analyzed to detect:
 
@@ -176,7 +176,7 @@ piracy preparation
 covert cargo exchange
 smuggling rendezvous
 
-5.6 Trajectory Forecasting Module
+5.6 TRAJECTORY FORECASTING MODULE
 
 A dedicated forecasting layer predicts future vessel paths.
 
@@ -208,7 +208,7 @@ This enables proactive maritime alerts instead of only reactive detection.
 
 
 
-6. System Architecture
+6. SYSTEM ARCHITECTURE
 
 The complete pipeline may include:
 
@@ -225,7 +225,7 @@ alert generation
 
 
 
-7. Software and Tools
+7. SSOFTWARE AND TOOLS
 AI and ML
 Python
 PyTorch
@@ -249,7 +249,7 @@ maritime shapefiles
 
 
 
-8. Expected Outputs
+8. EXPECTED OUTPUTS
 
 The final system produces:
 
@@ -263,9 +263,9 @@ suspicious behavior reports
 
 
 
-9. Applications
+9. APPLICATIONS
 
-9.1 Coastal Security
+9.1 COASTAL SECURITY
 
 Supports:
 
@@ -274,7 +274,7 @@ Navy surveillance
 maritime border protection
 anti-smuggling
 
-9.2 Illegal Fishing Prevention
+9.2 ILLEGAL FISHING PREVENTION
 
 Detects:
 
@@ -282,7 +282,7 @@ unauthorized trawlers
 cross-border fishing
 repeated dark fishing activity
 
-9.3 Maritime Traffic Intelligence
+9.3 MARITIME TRAFFIC INTELLIGENCE
 
 Ship classification and trajectory forecasting improve:
 
@@ -290,7 +290,7 @@ route monitoring
 congestion prediction
 suspicious path deviation detection
 
-9.4 Search and Rescue
+9.4 SEARCH AND RESCUE
 
 Can assist in:
 
@@ -300,7 +300,7 @@ probable drift zone estimation
 
 
 
-10. Future Scope
+10. FUTURE SCOPE
 
 Possible extensions include:
 
@@ -313,7 +313,7 @@ transformer-based long-range path prediction
 
 
 
-11. Conclusion
+11. CONCLUSION
 
 This project presents an integrated maritime surveillance framework for:
 
