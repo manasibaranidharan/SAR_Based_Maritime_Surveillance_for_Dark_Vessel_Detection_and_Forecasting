@@ -1,11 +1,6 @@
 import os
 import rasterio
 import matplotlib.pyplot as plt
-import pandas as pd
-
-import os
-import rasterio
-import matplotlib.pyplot as plt
 
 tiny_path = "Dataset/xview3/tiny_scenes"
 
@@ -17,13 +12,13 @@ image_path = os.path.join(tiny_path, scene_folder, "VV_dB.tif")
 with rasterio.open(image_path) as src:
     image = src.read(1)
 
-print("Image shape:", image.shape)
+h, w = image.shape
 
-# take small patch
-patch = image[:1000, :1000]
+# take center patch
+patch = image[h//2:h//2+1000, w//2:w//2+1000]
 
 plt.figure(figsize=(8, 8))
 plt.imshow(patch, cmap="gray")
-plt.title("Small SAR Patch")
+plt.title("Center SAR Patch")
 plt.axis("off")
 plt.show()

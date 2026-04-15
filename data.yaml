@@ -1,0 +1,6 @@
+path: /home/kavi/SAR_Based_Maritime_Surveillance_for_Dark_Vessel_Detection_and_Forecasting/processed_ai_dataset
+train: images/train
+val: images/train
+
+nc: 1
+names: ['ship']
