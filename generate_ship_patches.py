@@ -10,12 +10,12 @@ tiny_path = "Dataset/xview3/tiny_scenes"
 
 # output folder
 save_dir = "processed ai dataset/ships"
-os.makedirs(save_dir, exist_ok=True)
+os.makedirs(save_dir, exist_ok=True)                            
 
 # find first VV image
 image_path = None
 for root, dirs, files in os.walk(tiny_path):
-    if "VV_dB.tif" in files:
+    if "VV_dB.tif" in files:                                                                                            
         image_path = os.path.join(root, "VV_dB.tif")
         break
 

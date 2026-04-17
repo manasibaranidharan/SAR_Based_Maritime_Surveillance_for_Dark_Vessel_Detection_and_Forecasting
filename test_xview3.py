@@ -19,6 +19,6 @@ patch = image[h//2:h//2+1000, w//2:w//2+1000]
 
 plt.figure(figsize=(8, 8))
 plt.imshow(patch, cmap="gray")
-plt.title("Center SAR Patch")
+plt.title("Center SAR Patch")           
 plt.axis("off")
 plt.show()
