@@ -3,7 +3,7 @@ import pandas as pd
 import rasterio
 import matplotlib.pyplot as plt
 
-# load ship labels 
+# load ship labels                          
 df = pd.read_csv("Dataset/xview3/train.csv")
 
 tiny_path = "Dataset/xview3/tiny_scenes"
