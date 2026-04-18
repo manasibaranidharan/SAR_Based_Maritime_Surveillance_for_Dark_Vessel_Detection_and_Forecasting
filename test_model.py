@@ -5,7 +5,7 @@ model = YOLO("runs/detect/sar_ship_detector/weights/best.pt")
 
 # run prediction on one SAR patch
 results = model.predict(
-    source="processed_ai_dataset/images/train/ship_188.png",
+    source="processed_ai_dataset/images/train/ship_45.png",
     conf=0.05,
     save=True
 )
